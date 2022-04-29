@@ -1,0 +1,175 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background: linear-gradient(-35deg, rgba(167,147,255,0.4) 0%, rgba(90,134,215,0.4) 50%, rgba(113,212,201,0.4) 100%);
+}
+
+.header {
+  font-weight: 500;
+  margin: 20px 0 5px 0;
+  align-self: center;
+  color: #00325c;
+}
+
+.formLabel {
+  display: block;
+  font-size: 14px;
+  color: #007be0;
+  font-weight: 600;
+  margin: 14px 0 7px 20px;
+}
+
+.textInput {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 2px solid #777;
+  background-color: #e0ffff60;
+  outline: none;
+  margin: 0 15px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 600;
+  color: #333;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.senderFullName {
+  display: flex;
+}
+
+.senderName {
+  flex: 0.5;
+  margin: 0 15px;
+
+  .formLabel {
+    margin: 14px 0 7px 5px;
+  }
+
+  .textInput {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.message {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid #777;
+  padding: 8px;
+  margin: 0 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #e0ffff60;
+  resize: vertical;
+}
+
+.success {
+  margin-top: 10px;
+  align-self: center;
+
+  .dialogue {
+    background-color: lightblue;
+    color: blue;
+  }
+
+  .barTimer {
+    color: blue;
+    background-color: blue;
+  }
+}
+
+.error {
+  margin-top: 10px;
+  align-self: center;
+
+  .dialogue {
+    background-color: pink;
+    color: red;
+  }
+
+  .barTimer {
+    color: red;
+    background-color: red;
+  }
+}
+
+.dialogue {
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.barTimer {
+  margin-top: -4px;
+  height: 4px;
+  border-bottom-left-radius: 5px;
+  animation-name: barTimer;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-duration: 8s;
+}
+
+@keyframes barTimer {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+.button {
+  margin: 20px 15px;
+  border-radius: 5px;
+  border: 2px solid black;
+  background-color: #444444b0;
+  color: white;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: ease-out 200ms;
+
+  &:disabled {
+    background-color: rgb(170, 170, 170);
+    color: rgb(109, 109, 109);
+    border-color: rgb(131, 131, 131);
+    cursor: not-allowed;
+
+    &:hover {
+      background-color: rgb(170, 170, 170);
+      color: rgb(109, 109, 109);
+      border-color: rgb(131, 131, 131);
+      cursor: not-allowed;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+  }
+
+  &:hover {
+    background-color: lightcyan;
+    color: #007be0;
+    border-color: #007be0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: ease-out 200ms;
+  }
+}

@@ -1,0 +1,48 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+
+  .icon {
+    font-size: 20px;
+    margin: 3px;
+    margin-right: 7px;
+  }
+
+  &:first-child {
+    bottom: 55px;
+    right: -75px;
+    transition: ease-out 150ms;
+
+    &:hover {
+      right: 0px;
+      transition: ease-out 150ms;
+    }
+  }
+
+  &:last-child {
+    bottom: 10px;
+    right: -64px;
+    transition: ease-out 150ms;
+
+    &:hover {
+      right: 0px;
+      transition: ease-out 150ms;
+    }
+  }
+}

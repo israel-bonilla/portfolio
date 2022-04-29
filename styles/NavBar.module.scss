@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #007be0;
+  padding: 0 10px;
+  height: 41px;
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 900;
+
+  @media (max-width: 550px) {
+    flex-direction: column;
+    height: 76px;
+    justify-content: flex-start;
+  }
+}
+
+.link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.site {
+  display: flex;
+  align-items: center;
+
+  span {
+    margin-left: 6px;
+  }
+}

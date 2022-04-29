@@ -1,0 +1,140 @@
+.container {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 25px;
+  background: linear-gradient(-45deg, rgba(255,255,255,0.2) 0%, rgba(0,194,255,0.3) 50%, rgba(255,255,255,0.2) 100%);
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  // background: radial-gradient(circle, rgba(63,206,251,0.499019676229867) 0%, rgba(255,255,255,0.499019676229867) 100%);
+  // background: linear-gradient(-45deg, rgba(255,255,255,0.5) 0%, rgba(0,194,255,0.35) 50%, rgba(255,255,255,0.5) 100%);
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @media (max-width: 615px) {
+    flex-direction: column;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0.4;
+  padding: 0 10px;
+}
+
+.name {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.occupation {
+  font-size: 20px;
+  font-weight: 700;
+  color: blue;
+}
+
+.aboutText {
+  flex: 0.6;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  line-height: 1.6em;
+
+  p {
+    margin: 10px 0;
+  }
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+
+  @media (max-width: 615px) {
+    justify-content: space-around;
+  }
+}
+
+.actionBtn {
+  background-color: #777;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  width: 250px;
+  padding: 15px 0px;
+  border-radius: 7px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 3px 8px;
+  transition: ease-out 100ms;
+
+  &:hover {
+    background-color: #007be0;
+    box-shadow: rgba(0, 37, 68, 0.7) 0px 5px 15px;
+    transform: scale(1.02);
+    transition: ease-out 90ms;
+
+    .icon {
+      color: #003f72;
+    }
+
+    span {
+      color: #77ebff;
+    }
+
+    .indicator {
+      transform: translateY(45px);
+      transition: ease-out 0.2s;
+    }
+  }
+
+  span {
+    color: white;
+  }
+
+  &:first-child {
+    .icon {
+      font-size: 30px;
+    }
+  }
+
+  @media (max-width: 615px) {
+    width: 45%;
+    font-size: 15px;
+    padding: 10px 5px;
+
+    .icon {
+      font-size: 20px;
+    }
+
+    &:first-child {
+      .icon {
+        font-size: 23px;
+      }
+    }
+  }
+}
+
+.icon {
+  font-size: 25px;
+  color: #00c997;
+  margin: 0 10px 0 5px;
+}

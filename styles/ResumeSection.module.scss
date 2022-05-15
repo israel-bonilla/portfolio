@@ -1,0 +1,9 @@
+.container {
+  padding: 10px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  background: linear-gradient(5deg, #b4ff4770 0%, #ffffff70 50%, #d6ff4870 100%);
+}
+

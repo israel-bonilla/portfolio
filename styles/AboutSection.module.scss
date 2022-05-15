@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-evenly;
   padding: 25px;
-  background: linear-gradient(-45deg, rgba(255,255,255,0.2) 0%, rgba(0,194,255,0.3) 50%, rgba(255,255,255,0.2) 100%);
+  // background: linear-gradient(-45deg, rgba(255,255,255,0.2) 0%, rgba(0,194,255,0.3) 50%, rgba(255,255,255,0.2) 100%);
 }
 
 .background {
@@ -57,6 +57,10 @@
   p {
     margin: 10px 0;
   }
+
+  @media (max-width: 550px) {
+    font-size: 14px;
+  }
 }
 
 .actions {
@@ -70,7 +74,7 @@
 }
 
 .actionBtn {
-  background-color: #777;
+  background-color: #555;
   color: white;
   font-size: 18px;
   font-weight: 600;
@@ -89,7 +93,7 @@
   &:hover {
     background-color: #007be0;
     box-shadow: rgba(0, 37, 68, 0.7) 0px 5px 15px;
-    transform: scale(1.02);
+    transform: scale(1.015);
     transition: ease-out 90ms;
 
     .icon {

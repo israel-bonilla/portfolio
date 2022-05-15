@@ -13,7 +13,7 @@ const AboutSection = () => {
         </div>
         <div className={styles.aboutText}>
           <p>Hi, I'm Israel! Welcome to my portfolio site.</p>
-          <p>I'm a software developer and I've been coding since I was 13. I took on development for the web in 2021 and have been learning popular frameworks like React. I've also done work on the back-end with databases and servers.</p>
+          <p>I'm a software developer and have been coding since I was 13. I took on development for the web after high school, and have been learning popular frameworks like React. I've also done work on the back-end with databases and servers.</p>
           <p>Feel free to check out my projects below.</p>
         </div>
       </div>

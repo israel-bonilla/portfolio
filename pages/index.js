@@ -8,61 +8,79 @@ import ProjectsSection from '../components/ProjectsSection'
 import SectionContainer from '../components/SectionContainer'
 import Socials from '../components/Socials'
 import styles from '../styles/Home.module.scss'
+import { useState, useEffect } from 'react';
+import SpinnerLoader from '../components/SpinnerLoader'
+import ResumeSection from '../components/ResumeSection'
 
 const Home = () => {
+  const [pageLoaded, setPageLoaded] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setPageLoaded(true);
+    }, 1500);
+  }, []);
+
   return (
     <div className={styles.container}>
-      <Head>
-        <title>Portfolio - Israel Bonilla</title>
-        <meta name="description" content="Israel Bonilla's portfolio" />
-        <link rel="icon" href="http://links.israelb.xyz/portfolio/IB-Logo-2.png" />
-      </Head>
+      {!pageLoaded
+        ? <SpinnerLoader />
+        : (
+          <>
+          <Head>
+            <title>Portfolio - Israel Bonilla</title>
+            <meta name="description" content="Israel Bonilla's portfolio" />
+            <link rel="icon" href="http://links.israelb.xyz/portfolio/IB-Logo-2.png" />
+          </Head>
 
-      {/* Loading spinner (?) */}
+          {/* Loading spinner (?) */}
 
-      <div className={styles.background}></div>
+          <div className={styles.background}></div>
 
-      <NavBar />
+          <NavBar />
 
-      <LinksBar />
-      <Socials />
+          <LinksBar />
+          <Socials />
 
-      <main className={styles.main}>
-        {/* About */}
-        <SectionContainer title="About" id="about">
-          <AboutSection />
-        </SectionContainer>
+          <main className={styles.main}>
+            {/* About */}
+            <SectionContainer title="About" id="about">
+              <AboutSection />
+            </SectionContainer>
 
-        {/* Portfolio/Projects Showcase */}
-        <SectionContainer title="Portfolio" id="projects">
-          <ProjectsSection />
-        </SectionContainer>
+            {/* Portfolio/Projects Showcase */}
+            <SectionContainer title="Portfolio" id="projects">
+              <ProjectsSection />
+            </SectionContainer>
 
-        {/* Resume */}
-        <SectionContainer title="Resume" id="resume">
+            {/* Resume */}
+            <SectionContainer title="Resume" id="resume">
+              <ResumeSection />
+            </SectionContainer>
 
-        </SectionContainer>
+            {/* Contact */}
+            <SectionContainer title="Contact" id="contact">
+              <ContactSection />
+            </SectionContainer>
 
-        {/* Contact */}
-        <SectionContainer title="Contact" id="contact">
-          <ContactSection />
-        </SectionContainer>
+            {/* Achievements/Techs/Libraries I've used/Other stuff/sections */}
+            {/* <SectionContainer title="Other" id="other">
 
-        {/* Achievements/Techs/Libraries I've used/Other stuff/sections */}
-        <SectionContainer title="Other" id="other">
+            </SectionContainer>
 
-        </SectionContainer>
+            <SectionContainer title="Other" id="other">
 
-        <SectionContainer title="Other" id="other">
+            </SectionContainer>
 
-        </SectionContainer>
+            <SectionContainer title="Other" id="other">
 
-        <SectionContainer title="Other" id="other">
+            </SectionContainer> */}
+          </main>
 
-        </SectionContainer>
-      </main>
-
-      {/* footer (?) */}
+          {/* footer (?) */}
+          </>
+        )
+      }
     </div>
   )
 }

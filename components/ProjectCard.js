@@ -19,43 +19,60 @@ const ProjectCard = ({ title, gallery, link, source, description, techsUsed, fea
       <header className={styles.header}>{title}</header>
       
       <article className={styles.content}>
-        <div className={styles.gallery}>
-          <div className={styles.galleryItemContainer}>
-            <Image
-              className={styles.galleryItem}
-              src={gallery[galleryIndex]}
-              alt=""
-              width={370}
-              height={260}
-              layout="responsive"
-            />
-          </div>
-
-          <div className={styles.galleryBtns}>
-            <div className={styles.galleryBtnContainer}
-              onClick={() => setGalleryIndex((galleryIndex ? galleryIndex : gallery.length) - 1)}
-            >
-              <BsArrowLeftCircleFill className={styles.galleryBtn} />
+        {gallery &&
+          <div className={styles.gallery}>
+            <div className={styles.galleryItemContainer}>
+              {gallery[galleryIndex].includes(".mp4")
+                ? (
+                  <video
+                    className={styles.galleryItem}
+                    autoPlay="autoplay"
+                    loop="loop"
+                    muted="muted"
+                    // width="450" height="316"
+                  >
+                    <source src={gallery[galleryIndex]} type="video/mp4" />
+                  </video>
+                ) : (
+                  <Image
+                    className={styles.galleryItem}
+                    src={gallery[galleryIndex]}
+                    alt=""
+                    width={370}
+                    height={260}
+                    layout="responsive"
+                  />
+                  // html img
+                )
+              }
             </div>
-            <div className={styles.galleryBtnContainer}
-              onClick={() => setGalleryIndex(galleryIndex + 1 === gallery.length ? 0 : galleryIndex + 1)}
-            >
-              <BsArrowRightCircleFill className={styles.galleryBtn} />
+
+            <div className={styles.galleryBtns}>
+              <div className={styles.galleryBtnContainer}
+                onClick={() => setGalleryIndex((galleryIndex ? galleryIndex : gallery.length) - 1)}
+              >
+                <BsArrowLeftCircleFill className={styles.galleryBtn} />
+              </div>
+              <div className={styles.galleryBtnContainer}
+                onClick={() => setGalleryIndex(galleryIndex + 1 === gallery.length ? 0 : galleryIndex + 1)}
+              >
+                <BsArrowRightCircleFill className={styles.galleryBtn} />
+              </div>
+            </div>
+
+            <div className={styles.galleryIndicator}>
+              {gallery.map((_, i) => 
+                <GalleryIndicator
+                  onClick={() => setGalleryIndex(i)}
+                  key={i}
+                  active={galleryIndex === i}
+                />)}
             </div>
           </div>
-
-          <div className={styles.galleryIndicator}>
-            {gallery.map((_, i) => 
-              <GalleryIndicator
-                onClick={() => setGalleryIndex(i)}
-                key={i}
-                active={galleryIndex === i}
-              />)}
-          </div>
-        </div>
+        }
 
         <div className={styles.actions}>
-          <a className={`${styles.action} ${styles.actionPreview}`} href={link} target="_blank"
+          {link && <a className={`${styles.action} ${styles.actionPreview}`} href={link} target="_blank"
             onMouseEnter={() => setPreviewActionHover(true)}
             onMouseLeave={() => setPreviewActionHover(false)}
           >
@@ -64,7 +81,7 @@ const ProjectCard = ({ title, gallery, link, source, description, techsUsed, fea
               : <FaDesktop className={styles.icon} />  
             }
             <span>Live Preview</span>
-          </a>
+          </a>}
 
           <a className={`${styles.action} ${styles.actionSource}`} href={source} target="_blank">
             <FaCode className={styles.icon} />

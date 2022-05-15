@@ -1,6 +1,10 @@
 import styles from '../styles/ContactSection.module.scss';
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { FaEnvelope, FaUser, FaLightbulb } from 'react-icons/fa';
+import { HiPencilAlt } from 'react-icons/hi';
+import { BiMessageAltDetail } from 'react-icons/bi';
+import { MdSend } from 'react-icons/md';
 
 const ContactSection = () => {
   const [status, setStatus] = useState('');
@@ -11,6 +15,14 @@ const ContactSection = () => {
     subject: '',
     message: '',
   });
+
+  const validEmail = /^\S+@\S+\.\S+$/.test(formValues.email);
+
+  const formComplete =
+    formValues.firstName &&
+    validEmail &&
+    formValues.subject &&
+    formValues.message;
 
   useEffect(() => {
     switch (status) {
@@ -37,7 +49,7 @@ const ContactSection = () => {
   const sendEmail = e => {
     e.preventDefault();
 
-    emailjs.send("service_v096uzt", "template_2xmedkg", formValues, "KT4m5uES3DOtktf_j")
+    emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, formValues, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
       .then(res => {
         console.log("Email sent successfully:", res);
         setFormValues({
@@ -77,8 +89,9 @@ const ContactSection = () => {
         <div className={styles.senderFullName}>
           <div className={styles.senderName}>
             <label className={styles.formLabel}>
-              {!formValues.firstName && <span>* </span>}
+              <FaUser />
               First Name
+              {!formValues.firstName && <span>*</span>}
             </label>
             <input
               placeholder="John"
@@ -104,8 +117,9 @@ const ContactSection = () => {
         </div>
 
         <label className={styles.formLabel}>
-          {!formValues.email && <span>* </span>}
+          <FaEnvelope />
           Email
+          {!validEmail && <span>*</span>}
         </label>
         <input
           placeholder="john@example.com"
@@ -117,8 +131,10 @@ const ContactSection = () => {
         />
 
         <label className={styles.formLabel}>
-          {!formValues.subject && <span>* </span>}
+          <FaLightbulb />
+          {/* <HiPencilAlt /> */}
           Subject
+          {!formValues.subject && <span>*</span>}
         </label>
         <input
           placeholder="Comment"
@@ -130,8 +146,10 @@ const ContactSection = () => {
         />
 
         <label className={styles.formLabel}>
-          {!formValues.message && <span>* </span>}
+          <HiPencilAlt />
+          {/* <BiMessageAltDetail /> */}
           Message
+          {!formValues.message && <span>*</span>}
         </label>
         <textarea
           placeholder="Message..."
@@ -142,17 +160,15 @@ const ContactSection = () => {
           rows="5"
         />
 
-        <input
-          disabled={
-            !(formValues.firstName &&
-            formValues.email &&
-            formValues.subject &&
-            formValues.message)
-          }
-          type="submit"
-          className={styles.button}
-          value="SEND"
-        />
+        <div className={styles.btnContainer}>
+          <input
+            disabled={!formComplete}
+            type="submit"
+            className={styles.button}
+            value="SEND"
+          />
+          <MdSend />
+        </div>
       </form>
     </div>
   )

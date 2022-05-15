@@ -29,7 +29,6 @@
   display: flex;
   width: 100%;
   max-width: 450px;
-  height: 100%;
   flex-direction: column;
   align-self: center;
   align-items: center;
@@ -235,5 +234,25 @@
       font-size: 9px;
       margin-right: 8px;
     }
+  }
+}
+
+@media (max-width: 550px) {
+  .container {
+    margin: 10px;
+  }
+
+  .header {
+    padding: 3px 15px;
+    font-size: 20px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+
+  .action {
+    padding: 7px 14px;
+    font-size: 15px;
   }
 }

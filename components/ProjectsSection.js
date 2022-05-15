@@ -20,6 +20,7 @@ const ProjectsSection = () => {
           .map(project => <ProjectCard key={project.id} {...project} />)
         }
       </div>
+      {/* {projects.map(project => <ProjectCard key={project.id} {...project} />)} */}
     </div>
   )
 }

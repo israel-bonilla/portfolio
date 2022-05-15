@@ -1,18 +1,16 @@
 .container {
-  display: flex;
   // display: grid;
-  // grid-template-columns: 1fr 1fr;
+  // grid-template-columns: repeat(auto-fit, minmax(425px, 1fr));
+  // gap: 1rem;
+  display: flex;
 
-  @media (max-width: 824px) {
+  @media (max-width: 840px) {
+    // display: flex;
     flex-direction: column;
-    // grid-template-columns: 1fr;
+    align-items: center;
   }
 }
 
 .half {
   flex: 0.5;
-  // display: flex;
-  // flex-direction: column;
 }
-
-//825

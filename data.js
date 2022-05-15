@@ -89,7 +89,7 @@ export const projects = [
     title: "My Portfolio Site",
     // gallery: [],
     // link: "",
-    source: "",
+    source: "https://github.com/israel-bonilla/portfolio",
     description: "You are here. My latest and one of my proudest builds at the time of writing this: My portfolio site for showcasing my builds and getting in contact with people interested in my skills.",
     techsUsed: ["Next.js", "React", "Sass Modules", "EmailJS", "React Icons", "Javascript"],
     features: ["Modern-ish site design and style", "Interactive and responsive", "Video and image gallery for each item in the projects section", "CSS animations", "Functioning contact/email form"],

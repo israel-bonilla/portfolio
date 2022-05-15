@@ -70,7 +70,7 @@ const ContactSection = () => {
   return (
     <div className={styles.container}>
       <form className={styles.form} onSubmit={sendEmail}>
-        <h1 className={styles.header}>Let's get in touch.</h1>
+        <h1 className={styles.header}>Let&apos;s get in touch.</h1>
 
         {status === "SUCCESS" && (
           <div className={styles.success}>

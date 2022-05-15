@@ -72,7 +72,7 @@ const ProjectCard = ({ title, gallery, link, source, description, techsUsed, fea
         }
 
         <div className={styles.actions}>
-          {link && <a className={`${styles.action} ${styles.actionPreview}`} href={link} target="_blank"
+          {link && <a className={`${styles.action} ${styles.actionPreview}`} href={link} target="_blank" rel="noreferrer"
             onMouseEnter={() => setPreviewActionHover(true)}
             onMouseLeave={() => setPreviewActionHover(false)}
           >
@@ -83,7 +83,7 @@ const ProjectCard = ({ title, gallery, link, source, description, techsUsed, fea
             <span>Live Preview</span>
           </a>}
 
-          <a className={`${styles.action} ${styles.actionSource}`} href={source} target="_blank">
+          <a className={`${styles.action} ${styles.actionSource}`} href={source} target="_blank" rel="noreferrer">
             <FaCode className={styles.icon} />
             <span>Source Code</span>
           </a>

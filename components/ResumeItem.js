@@ -9,6 +9,7 @@ const ResumeItem = ({ name, icon, file }) => {
         href={`http://links.israelb.xyz/portfolio/resume-items/${file}`}
         download
         target="_blank"
+        rel="noreferrer"
       >
         <div className={styles.imgContainer}>
             <img

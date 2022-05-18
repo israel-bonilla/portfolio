@@ -4,7 +4,7 @@ import ResumeItem from './ResumeItem';
 const ResumeSection = () => {
   return (
     <div className={styles.container}>
-      <ResumeItem name="Resume.pdf" icon="pdf-icon.png" file="Resume.pdf" />
+      <ResumeItem name="Resume.pdf" icon="pdf-icon.png" file="Resume1.pdf" />
       <ResumeItem name="Resume.docx" icon="docx-icon.png" file="Resume.docx" />
       <ResumeItem name="Resume.doc" icon="doc-icon.png" file="Resume.doc" />
       <ResumeItem name="Resume.odt" icon="odt-icon.png" file="Resume.odt" />

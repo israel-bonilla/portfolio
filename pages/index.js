@@ -30,7 +30,7 @@ const Home = () => {
           <Head>
             <title>Portfolio - Israel Bonilla</title>
             <meta name="description" content="Israel Bonilla's portfolio" />
-            <link rel="icon" href="https://links.israelb.xyz/portfolio/IB-Logo-2.png" />
+            <link rel="icon" href="https://links.israelb.xyz/portfolio/IB-Logo.png" />
           </Head>
 
           {/* Loading spinner (?) */}

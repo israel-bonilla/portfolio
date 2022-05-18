@@ -1,10 +1,17 @@
+import Image from 'next/image';
 import styles from '../styles/NavBar.module.scss';
 
 const NavBar = () => {
   return (
     <nav className={styles.container}>
       <a className={`${styles.link} ${styles.site}`} href="#">
-        <img className={styles.logo} src="http://links.israelb.xyz/portfolio/IB-Logo.png" width="30" height="25" alt="" />
+        <Image
+          className={styles.logo}
+          src="https://links.israelb.xyz/portfolio/IB-Logo.png"
+          width={30}
+          height={25}
+          alt=""
+        />
         <span>portfolio.israelb.xyz</span>
       </a>
       <div>

@@ -25,4 +25,4 @@ const NavBar = () => {
 }
 
 export default NavBar
-//http://links.israelb.xyz/portfolio/logo.png
+//https://links.israelb.xyz/portfolio/logo.png

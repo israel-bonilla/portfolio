@@ -11,6 +11,7 @@ import styles from '../styles/Home.module.scss'
 import { useState, useEffect } from 'react';
 import SpinnerLoader from '../components/SpinnerLoader'
 import ResumeSection from '../components/ResumeSection'
+import TechsSection from '../components/TechsSection'
 
 const Home = () => {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -32,8 +33,6 @@ const Home = () => {
             <meta name="description" content="Israel Bonilla's portfolio" />
             <link rel="icon" href="https://links.israelb.xyz/portfolio/IB-Logo.png" />
           </Head>
-
-          {/* Loading spinner (?) */}
 
           <div className={styles.background}></div>
 
@@ -63,18 +62,10 @@ const Home = () => {
               <ContactSection />
             </SectionContainer>
 
-            {/* Achievements/Techs/Libraries I've used/Other stuff/sections */}
-            {/* <SectionContainer title="Other" id="other">
-
+            {/* Techs I'm familiar with */}
+            <SectionContainer title="Technologies" id="techs">
+              <TechsSection />
             </SectionContainer>
-
-            <SectionContainer title="Other" id="other">
-
-            </SectionContainer>
-
-            <SectionContainer title="Other" id="other">
-
-            </SectionContainer> */}
           </main>
 
           {/* footer (?) */}

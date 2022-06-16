@@ -1,5 +1,20 @@
 export const projects = [
   {
+    id: 108,
+    title: "Reddit (Clone)",
+    gallery: [
+      "https://links.israelb.xyz/portfolio/project-gallery-items/reddit-clone/1.mp4",
+      "https://links.israelb.xyz/portfolio/project-gallery-items/reddit-clone/2.png",
+      "https://links.israelb.xyz/portfolio/project-gallery-items/reddit-clone/3.png",
+      "https://links.israelb.xyz/portfolio/project-gallery-items/reddit-clone/4.png",
+    ],
+    link: "https://reddit-clone-ib.vercel.app",
+    source: "https://github.com/israel-bonilla/reddit-clone",
+    description: "A full-stack clone of Reddit with post/comment/vote functionality and Reddit sign-in.",
+    techsUsed: ["Next.js/React", "PostgreSQL/SQL", "GraphQL/Apollo", "Supabase", "StepZen", "TypeScript", "Tailwind CSS"],
+    features: ["Dynamic routing for subreddits, posts, and users", "Fetches posts based on GraphQL queries made to the PostgreSQL back-end", "Responsive design with Tailwind CSS", "Reddit Authentication/Sign-in", "SQL mutations to add posts, comments, and votes managed by Supabase database"],
+  },
+  {
     id: 101,
     title: "Louphira",
     gallery: [
@@ -105,3 +120,41 @@ export const projects = [
   //   features: [],
   // },
 ];
+
+export const techs = {
+  frontend: [
+    { name: "HTML5", icon: "https://icones.pro/wp-content/uploads/2021/05/icone-html-orange.png" },
+    { name: "CSS3", icon: "https://www.joykal.com/wp-content/uploads/2019/09/css3.png" },
+    { name: "SASS", icon: "https://www.seekpng.com/png/full/377-3772047_sass-logo.png" },
+    { name: "JavaScript", icon: "https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" },
+    { name: "TypeScript", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" },
+    { name: "React.js", icon: "https://cdn.hashnode.com/res/hashnode/image/upload/v1647490619965/P1dsNgj-f1.png" },
+    { name: "Next.js", icon: "https://seeklogo.com/images/N/next-js-logo-8FCFF51DD2-seeklogo.com.png" },
+    { name: "Recoil", icon: "https://static.codenary.co.kr/framework_logo/recoil.png" },
+    { name: "Redux", icon: "https://raw.githubusercontent.com/reduxjs/redux/master/logo/logo.png" },
+    { name: "Tailwind CSS", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png" },
+    { name: "Styled Components", icon: "https://gozattila.dev/static/media/styled_components.a46dc006.png" },
+    { name: "jQuery", icon: "https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png" },
+    { name: "Bootstrap", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png" },
+    { name: "Material UI", icon: "https://img.icons8.com/color/12x/material-ui.png" },
+    { name: "React Router", icon: "https://miro.medium.com/max/264/1*8hQx0hL2a7eobSlPsa8AtQ.png" },
+  ],
+  backend: [
+    { name: "Node.js", icon: "https://nodejs.org/static/images/logo-hexagon-card.png" },
+    { name: "Firebase", icon: "https://static.cdnlogo.com/logos/f/48/firebase.svg" },
+    { name: "Supabase", icon: "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" },
+    { name: "Express", icon: "https://cdn.icon-icons.com/icons2/2699/PNG/512/expressjs_logo_icon_169185.png" },
+    { name: "MongoDB", icon: "https://res.cloudinary.com/startup-grind/image/upload/c_fill,dpr_2,f_auto,g_center,q_auto:good/v1/gcs/platform-data-mongodb/events/mon.png" },
+    { name: "PostrgeSQL", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1985px-Postgresql_elephant.svg.png" },
+    { name: "SQL", icon: "https://cdn-icons-png.flaticon.com/512/603/603156.png" },
+    { name: "GraphQL", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png" },
+    { name: "Apollo", icon: "https://cdn.worldvectorlogo.com/logos/apollo-graphql-compact.svg" },
+    { name: "StepZen", icon: "https://console.dev/img/favicons/stepzen.com.png" },
+  ],
+  other: [
+    { name: "Git", icon: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" },
+    { name: "GitHub", icon: "https://cdn-icons-png.flaticon.com/512/25/25231.png" },
+    { name: "npm", icon: "https://authy.com/wp-content/uploads/npm-logo.png" },
+    { name: "yarn", icon: "https://seeklogo.com/images/Y/yarn-logo-F5E7A65FA2-seeklogo.com.png" },
+  ],
+}

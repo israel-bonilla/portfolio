@@ -6,12 +6,12 @@ import { techs } from '../data';
 const TechsSection = () => {
   return (
     <div className={styles.container}>
-      <h1>Technologies I'm Familiar With:</h1>
+      <h1>Technologies I&apos;m Familiar With:</h1>
       
       <h2>Front-end</h2>
       <div className={styles.section}>
         {techs.frontend.map(tech => (
-          <TechComponent id={tech.name} {...tech} />
+          <TechComponent key={tech.name} {...tech} />
         ))}
       </div>
       <hr />
@@ -19,7 +19,7 @@ const TechsSection = () => {
       <h2>Back-end/Databases</h2>
       <div className={styles.section}>
         {techs.backend.map(tech => (
-          <TechComponent id={tech.name} {...tech} />
+          <TechComponent key={tech.name} {...tech} />
         ))}
       </div>
       <hr />
@@ -27,7 +27,7 @@ const TechsSection = () => {
       <h2>Tools/Other</h2>
       <div className={styles.section}>
         {techs.other.map(tech => (
-          <TechComponent id={tech.name} {...tech} />
+          <TechComponent key={tech.name} {...tech} />
         ))}
       </div>
     </div>

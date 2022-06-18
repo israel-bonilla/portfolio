@@ -150,11 +150,15 @@ export const techs = {
     { name: "GraphQL", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/GraphQL_Logo.svg/2048px-GraphQL_Logo.svg.png" },
     { name: "Apollo", icon: "https://cdn.worldvectorlogo.com/logos/apollo-graphql-compact.svg" },
     { name: "StepZen", icon: "https://console.dev/img/favicons/stepzen.com.png" },
+    { name: "Sanity CMS", icon: "https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_96102ac6497377cd53da621075fe828e/sanity.png" },
   ],
   other: [
     { name: "Git", icon: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" },
     { name: "GitHub", icon: "https://cdn-icons-png.flaticon.com/512/25/25231.png" },
     { name: "npm", icon: "https://authy.com/wp-content/uploads/npm-logo.png" },
     { name: "yarn", icon: "https://seeklogo.com/images/Y/yarn-logo-F5E7A65FA2-seeklogo.com.png" },
+    { name: "Postman", icon: "https://res.cloudinary.com/postman/image/upload/t_team_logo/v1629869194/team/2893aede23f01bfcbd2319326bc96a6ed0524eba759745ed6d73405a3a8b67a8" },
+    { name: "Microsoft Excel", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Excel_%282019%E2%80%93present%29.svg.png" }, 
+    { name: "Microsoft Word", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/1200px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png" },
   ],
 }
